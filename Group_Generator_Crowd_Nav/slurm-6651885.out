@@ -1,0 +1,10 @@
+2024-08-30 00:27:04, INFO: robot FOV 2.000000
+2024-08-30 00:27:04, INFO: humans FOV 2.000000
+2024-08-30 00:27:04, INFO: Create other envs with new settings
+trained_models/SF_no_rand/checkpoints/41665.pt
+2024-08-30 00:27:04, INFO: human number: 40
+2024-08-30 00:27:04, INFO: Not randomize human's radius and preferred speed
+2024-08-30 00:27:04, INFO: Circle width: 7.0710678118654755
+2024-08-30 00:27:04, INFO: robot FOV 6.283185
+2024-08-30 00:27:04, INFO: humans FOV 6.283185
+slurmstepd: error: *** JOB 6651885 ON gilbreth-e007 CANCELLED AT 2024-08-30T00:57:06 DUE TO TIME LIMIT ***
