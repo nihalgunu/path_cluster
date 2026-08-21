@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PathCluster</title>
+<style>
+  :root { --ink:#1a1a1a; --muted:#555; --accent:#08306b; --bg:#ffffff; --rule:#e3e3e3; }
+  * { box-sizing:border-box; margin:0; }
+  body { font:17px/1.65 Georgia,'Times New Roman',serif; color:var(--ink); background:var(--bg); }
+  .wrap { max-width:760px; margin:0 auto; padding:56px 20px 80px; }
+  h1 { font-size:2rem; line-height:1.25; text-align:center; }
+  .sub { text-align:center; color:var(--muted); margin:10px 0 4px; }
+  .authors { text-align:center; margin:14px 0 6px; font-size:1.05rem; }
+  .links { text-align:center; margin:22px 0 34px; }
+  .links a { display:inline-block; margin:4px 6px; padding:8px 18px; border:1.5px solid var(--accent);
+             border-radius:999px; color:var(--accent); text-decoration:none; font-family:Helvetica,Arial,sans-serif;
+             font-size:.92rem; }
+  .links a:hover { background:var(--accent); color:#fff; }
+  .links a.soon { border-color:#bbb; color:#888; cursor:default; pointer-events:none; }
+  h2 { font-size:1.25rem; margin:38px 0 12px; border-bottom:1px solid var(--rule); padding-bottom:6px; }
+  p { margin:12px 0; }
+  figure { margin:22px 0; text-align:center; }
+  figure img { max-width:100%; border:1px solid var(--rule); border-radius:4px; }
+  figcaption { font-size:.88rem; color:var(--muted); margin-top:8px; text-align:left; }
+  ul { padding-left:22px; } li { margin:7px 0; }
+  pre { background:#f6f6f4; border:1px solid var(--rule); border-radius:6px; padding:14px;
+        overflow-x:auto; font-size:.82rem; line-height:1.5; }
+  .note { font-size:.9rem; color:var(--muted); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>PathCluster: Pedestrian Group-Adaptive<br>Social Navigation in Dense Crowds</h1>
+  <p class="authors">Nihal Gunukula &middot; Aniket Bera</p>
+  <p class="sub">IROS 2025</p>
+  <div class="links">
+    <a href="https://ieeexplore.ieee.org/abstract/document/11246339">Paper (IEEE)</a>
+    <a href="https://github.com/nihalgunu/path_cluster">Code</a>
+    <a href="#bibtex">BibTeX</a>
+  </div>
+
+  <h2>TL;DR</h2>
+  <p>Navigating a dense crowd one pedestrian at a time does not scale. PathCluster groups
+  people with similar trajectories and plans against the groups instead of the individuals:
+  a 45 percent higher success rate, a 25 percent lower collision rate, and harder
+  navigation tasks solved within a 48 hour compute budget than prior social navigation
+  models in extremely crowded environments.</p>
+
+  <h2>The idea</h2>
+  <p>Humans do not navigate crowds by dodging individuals. We read structure: the group of
+  three walking together that should not be split, the couple stopped to look at something,
+  the stream of commuters you merge into rather than cut across. PathCluster gives a robot
+  the same primitive. A group generator identifies clusters of pedestrians with similar
+  trajectories in real time and treats each cluster as a cohesive unit, which collapses
+  trajectory prediction from hundreds of individuals to a handful of groups while keeping
+  the benefit of prediction.</p>
+
+  <h2>Results</h2>
+  <ul>
+    <li><b>45 percent higher success rate</b> than prior social navigation models in
+        extremely crowded environments.</li>
+    <li><b>25 percent lower collision rate</b> under the same conditions.</li>
+    <li><b>Harder tasks become tractable:</b> navigation problems that prior methods could
+        not solve within a 48 hour limit are completed by PathCluster.</li>
+    <li>The learned policy picks up the judgment people never articulate: when to yield,
+        when to merge, when to wait.</li>
+  </ul>
+
+  <h2 id="bibtex">BibTeX</h2>
+  <pre>@inproceedings{gunukula2025pathcluster,
+  author    = {Gunukula, Nihal and Bera, Aniket},
+  title     = {PathCluster: Pedestrian Group-Adaptive Social Navigation in Dense Crowds},
+  booktitle = {IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  year      = {2025}
+}</pre>
+  <p class="note">Work with the IDEAS Lab at Purdue University.</p>
+</div>
+</body>
+</html>
